@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <cs50.h>
+
+
+int main(void)
+{
+    int  b;
+
+    do
+    {
+        b = get_int("N: ");
+    }
+    while (b <= 0);
+
+
+    for(int i=1; i <= b; i++) {
+        int s = i*i;
+
+        if(s == b) {
+            printf("%i\n", i);
+            break;
+        } else if(s > b) {
+            printf("%i\n", i - 1);
+            break;
+        }
+    }
+}
